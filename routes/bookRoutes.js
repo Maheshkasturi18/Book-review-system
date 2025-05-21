@@ -1,16 +1,16 @@
-const express = require('express');
-const auth = require('../middlewares/auth');
+const express = require("express");
+const auth = require("../middlewares/auth");
 const {
   createBook,
   getBooks,
   getBookById,
-} = require('../controllers/bookController');
+} = require("../controllers/bookController");
 
 const router = express.Router();
 
-router.post('/', auth, createBook);
-router.get('/', getBooks);
-router.get('/:id', getBookById);
+router.post("/", auth, createBook);
+router.get("/", getBooks);
+router.get("/:id", getBookById);
 
 module.exports = router;
 
@@ -23,7 +23,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /books:
+ * /api/books:
  *   post:
  *     summary: Add a new book
  *     tags: [Books]
@@ -55,7 +55,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /books:
+ * /api/books:
  *   get:
  *     summary: Get all books (with optional filters)
  *     tags: [Books]
@@ -85,7 +85,7 @@ module.exports = router;
 
 /**
  * @swagger
- * /books/{id}:
+ * /api/books/{id}:
  *   get:
  *     summary: Get book details by ID including average rating and reviews
  *     tags: [Books]
@@ -112,4 +112,3 @@ module.exports = router;
  *       404:
  *         description: Book not found
  */
-

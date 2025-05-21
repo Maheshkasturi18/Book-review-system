@@ -49,7 +49,7 @@ exports.getBookById = async (req, res) => {
     if (!book) return res.status(404).json({ message: 'Book not found.' });
 
     const reviews = await Review.find({ book: id })
-      .populate('user', 'username')
+      .populate('user', 'name')
       .skip((page - 1) * limit)
       .limit(parseInt(limit));
 

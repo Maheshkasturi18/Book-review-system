@@ -14,8 +14,8 @@ setupSwaggerDocs(app);
 
 app.use("/", authRoutes);
 app.use("/api/books", bookRoutes);
-app.use("/api", reviewRoutes);
-app.use("/api", searchRoutes);
+app.use("/", reviewRoutes);
+app.use("/", searchRoutes);
 app.get("/test", (req, res) => {
   res.send("Welcome to the Book API");
 });

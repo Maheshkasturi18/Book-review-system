@@ -7,7 +7,7 @@ const options = {
     info: {
       title: 'Book Review API',
       version: '1.0.0',
-      description: 'A RESTful API for book reviews',
+      description: 'A RESTful API documentation for book review system',
     },
     components: {
       securitySchemes: {
